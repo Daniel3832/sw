@@ -1,0 +1,13 @@
+.example-viewport {
+	height: 820px;
+	width: 400px;
+	border: 1px solid black;
+}
+  
+.example-item {
+	height: 50px;
+}
+
+.name {
+	padding-bottom: 1px;
+}

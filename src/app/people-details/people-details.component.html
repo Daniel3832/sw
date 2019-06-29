@@ -1,0 +1,13 @@
+<div *ngIf="person">
+	<ul>
+		<li>Name: {{ person.name }}</li>
+		<li>birth_year: {{ person.birth_year }}</li>
+		<li>height: {{ person.height }}</li>
+		<li>hair_color: {{ person.hair_color }}</li>
+		<li>homeworld: {{ person.homeworld }}</li>
+		<li>mass: {{ person.mass }}</li>
+	</ul>
+</div>
+<div *ngIf="person">
+	<a (click)="sendHomeworldURL(person.homeworld)" routerLink="../planets">home planet: {{ person.homeworld}} </a>
+</div>

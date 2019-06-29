@@ -1,0 +1,21 @@
+<div fxLayout="column">
+	<div fxLayout="row">
+		<h3>People</h3>
+		<button>Enable offline</button>
+	</div>
+	<div fxLayout="row">
+		<div>
+			<input #myInput placeholder="search" [(ngModel)]="name" (input)="filterPeople(myInput.value)">
+			<cdk-virtual-scroll-viewport itemSize="50" class="example-viewport">
+				<div *cdkVirtualFor="let person of people" class="example-item" routerLink="{{ person.name }}">
+					<div class="name" (click)="onPersonSelected(person)">{{ person.name }}</div>
+					<mat-divider></mat-divider>	
+				</div>
+			</cdk-virtual-scroll-viewport>
+		</div>
+		<div fxLayout="column">
+			<app-people-details [person]="selectedPerson"></app-people-details>
+		</div>
+	</div>
+</div>
+
